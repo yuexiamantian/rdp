@@ -38,3 +38,5 @@ build/
 *.iml
 out
 gen
+logs
+.DS_Store
