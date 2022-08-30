@@ -6,7 +6,7 @@ server:
     min-spare-threads: 30
     max-http-post-size: -1
   port: 8085
-  session: 
+  session:
     tracking-modes: cookie
   servlet:
     context-path: /report-admin
@@ -37,10 +37,10 @@ spring:
   freemarker:
     suffix: .html
     request-context-attribute: request
-  devtools: 
-    restart: 
+  devtools:
+    restart:
       additional-paths: src/main/java
-      exclude: statics/**,public/**,templates/**,bddpfiles/**  
+      exclude: statics/**,public/**,templates/**,bddpfiles/**
 report:
   version: 2.4.7
   globalSessionTimeout: 3600   #单机环境，session过期时间为60分钟
@@ -48,14 +48,14 @@ report:
     open: false  # 是否开启redis缓存  true开启   false关闭
   shiro:
     redis: false # true表示shiro session存到redis里，需要开启redis，才会生效【分布式场景】
-  material: 
-    path: /data2.4.7/material
-  relative-path:  false #true 表相对路径，false 绝对路径
-  bddp: 
+  material:
+    path: /data/material
+  relative-path: false #true 表相对路径，false 绝对路径
+  bddp:
     timeout: 5000 #api请求超时时间，单位毫秒
-    path:  /data2.4.7/
-  rdp: 
-    data-path: /data2.4.7/reportfiles
+    path: /data/
+  rdp:
+    data-path: /data/reportfiles
     maxexport: 10 #报表并发最大导出数量
     iscellauto: 0 #是否启用单元格自动扩展(1:启用 0:禁用）启用后宽度超出设定宽度会自动扩展宽度不会显示省略号
   auth:

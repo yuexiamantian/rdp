@@ -45,22 +45,17 @@ public class RdpPageController {
 	@ResponseBody
     @RequestMapping("/main/{uuid}")
     public void index(Map<String, Object> map, @PathVariable("uuid") String uuid) {
-        Cache.dicMap.clear();
-        logger.info("clear cache!!!");
     	ReportAnalysis.index(request, response, relativePath, realPath, map, iscellauto, uuid);
+        Cache.dicMap.clear();
     }
 	@ResponseBody
     @RequestMapping("/show")
     public void show(Map<String, Object> map) {
-        Cache.dicMap.clear();
-        logger.info("clear cache!!!");
         ReportAnalysis.show(request, response, relativePath, realPath, map, iscellauto, "");
     }
 	@ResponseBody
     @RequestMapping("/show/{uuid}")
     public void show(Map<String, Object> map, @PathVariable("uuid") String uuid) {
-        Cache.dicMap.clear();
-        logger.info("clear cache!!!");
         ReportAnalysis.show(request, response, relativePath, realPath, map, iscellauto, uuid);
     }
 
